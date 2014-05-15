@@ -1,3 +1,5 @@
-# tobebought
+=======
+krakenjs-sample-app
+======
 
-user's interface to keep a list of things he wants to buy. Sametime he will get product suggestion from ebay api on what he wants to buy
+kraken sample app with CRUD implemented
