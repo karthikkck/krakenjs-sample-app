@@ -1,0 +1,5 @@
+{>"layouts/master" /}
+
+{<body}
+    <h1>hi welcome {user.username}</h1>
+{/body}

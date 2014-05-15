@@ -1,0 +1,36 @@
+{>"layouts/master" /}
+
+{<body}
+welcome to todos list
+{?todos}
+<ul>
+  {#todos}
+  {^.status}
+  <li style="color: #ff0000">
+        <form method="POST" action="/todos">
+      <input type="hidden" name="todo_id" value="{.id}">
+      <input type="text" name="name" value="{.name}">
+      <input type="checkbox" name="status">
+
+      <input type="submit" value="Update">
+      <!--If we don't at the Cross-Site Request Forgey token, this POST will be rejected-->
+      <input type="hidden" name="_csrf" value="{_csrf}">
+      <input type="hidden" name="_method" value="PUT">
+    </form>
+
+    <form method="POST" action="/todos">
+      <input type="hidden" name="todo_id" value="{.id}">
+
+      <input type="submit" value="Delete">
+      <!--If we don't at the Cross-Site Request Forgey token, this POST will be rejected-->
+      <input type="hidden" name="_csrf" value="{_csrf}">
+      <input type="hidden" name="_method" value="DELETE">
+    </form>
+  </li>
+  {:else}
+  <li>{.name}</li>
+  {/.status}
+  {/todos}
+</ul>
+{/todos}
+{/body}
