@@ -1,5 +1,26 @@
 {>"layouts/master" /}
 
 {<body}
-    <h1>hi welcome {user.username}</h1>
+<h1>hi welcome {user.username}</h1>
+<h3>Users</h3>
+<ul>
+{#users}
+<li>{.username}</li>
+{/users}
+</ul>
+
+<h3>completed todos</h3>
+<ul>
+{#ctodos}
+<li>{.name}</li>
+{/ctodos}
+</ul>
+
+<h3>pending todos</h3>
+<ul>
+{#ptodos}
+<li>{.name}</li>
+{/ptodos}
+</ul>
+
 {/body}

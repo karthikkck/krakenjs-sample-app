@@ -1,4 +1,4 @@
-'use strict';
+'use st`rict';
 
 
 var kraken = require('kraken-js'),
