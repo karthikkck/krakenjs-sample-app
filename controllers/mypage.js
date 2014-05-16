@@ -77,6 +77,8 @@ module.exports = function (app) {
         .then(getPendingTasks)
         .done(function(data) {
             res.render('mypage', data);
+        }, function(err) {
+          throw new Error(err);
         });
     });
 
